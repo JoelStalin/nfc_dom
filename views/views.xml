@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    
+    <record model="ir.ui.view" id="ncf_dom_view_tree">
+      <field name="name">ncf.dom.view.tree</field>
+      <field name="model">ncf.dom</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="diario" />
+          <field name="type_nfc"/>
+          <field name="sufijo"/>
+          <field name="sequence_number"/>
+          <field name="start_ncf"/>
+          <field name="end_ncf"/>
+          <field name="experation_date"/>
+        </tree>
+      </field>
+    </record>
+          
+    
+    <record model="ir.actions.act_window" id="NCF_DOM.action_window">
+      <field name="name">NCF_DOM</field>
+      <field name="res_model">ncf.dom</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+   
+ 
+          <menuitem
+                id="menu_nfc"
+                name="Numero de comprobante"
+                sequence="0"
+                action="NCF_DOM.action_window"
+            />
+        </data> 
+
+</odoo>
